@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activity 1</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<style>
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+
+  .scene {
+    img {
+
+      position: relative;
+    }
+    /* background-color: rgb(250, 228, 250); */
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* Additional styles for content and images */
+  .content {
+    position: relative;
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .scene img {
+    max-width: 100%;
+    height: auto;
+  }
+  .navigation{
+    /* background-color: rgb(250, 228, 250); */
+  }
+</style>
+
+<body>
+  <!-- Audio elements for sounds  -->
+
+  <audio id="sun" src="./sounds/sun.mp3"></audio>
+  <audio id="done" src="./sounds/done.mp3"></audio>
+  <audio id="sight" src="./sounds/sight.mp3"></audio>
+  <audio id="night" src="./sounds/night.mp3"></audio>
+  <audio id="fun" src="./sounds/fun.mp3"></audio>
+  <audio id="story1" src="./sounds/story1.mp3"></audio>
+  <audio id="story2" src="./sounds/story2.mp3"></audio>
+  <audio id="story3" src="./sounds/story3.mp3"></audio>
+  
+
+
+  
+  
+  
+  <div class="header" style="box-shadow:3px 3px 10px rgb(0, 0, 0); z-index: 1;">
+    <img src="Logo.png" alt="Logo" class="logo" />
+    <img src="header.png" alt="Header Image" class="header-img" />
+  </div>
+
+
+  <div class="content">
+    <!-- SCENE 1 -->
+    <div class="scene" id="scene1">
+      <img src="1.png" alt="Scene 1 Image" />
+      <div class="text"></div>
+    </div>
+
+    <!-- SCENE 2 -->
+    <div class="scene hidden" id="scene2">
+      <img src="2.png" alt="Scene 2 Image" />
+      <div class="text">
+
+      </div>
+    </div>
+
+    <!-- SCENE 3 -->
+    <div class="scene hidden" id="scene3">
+      <img src="3.png" alt="Scene 3 Image" />
+   
+    </div>
+
+    <!-- SCENE 4 -->
+    <div class="scene hidden" id="scene4">
+      <img src="4.png" alt="Scene 4 Image" />
+      <div class="text">
+        <li><button onclick="playSound('story1')">🔊 Click To Listen</button></li>
+        
+      </div>
+      
+    </div>
+
+    <!-- SCENE 5 -->
+    <div class="scene hidden" id="scene5">
+      <img src="5.png" alt="Scene 5 Image" />
+      <div class="text">
+        <li><button onclick="playSound('sun')">🔊 Sun</button></li>
+        <li><button onclick="playSound('done')">🔊 Done</button></li>
+      </div>
+    </div>
+ 
+
+  <!-- SCENE 6 -->
+  <div class="scene hidden" id="scene6">
+    <img src="6.png" alt="Scene 6 Image" />
+   
+  </div>
+
+  <!-- SCENE 7 -->
+  <div class="scene hidden" id="scene7">
+    <img src="7.png" alt="Scene 7 Image" />
+    
+  </div>
+
+  <!-- SCENE 8 -->
+  <div class="scene hidden" id="scene8">
+    <img src="8.png" alt="Scene 8 Image" />
+    <div class="text">
+
+    </div>
+  </div>
+
+  <!-- SCENE 9 -->
+  <div class="scene hidden" id="scene9">
+    <img src="9.png" alt="Scene 9 Image" />
+    <div class="text">
+      <li><button onclick="playSound('story2')">🔊 Click To Listen!</button></li>
+
+    </div>
+  </div>
+
+  <!-- SCENE 10 -->
+  <div class="scene hidden" id="scene10">
+    <img src="10.png" alt="Scene 10 Image" />
+    <div class="text">      
+      <li><button onclick="playSound('sight')">🔊 Sight</button></li>
+      <li><button onclick="playSound('night')">🔊 Night</button></li>
+    </div>
+  </div>
+
+  <!-- SCENE 11 -->
+  <div class="scene hidden" id="scene11">
+    <img src="11.png" alt="Scene 11 Image" />
+    <div class="text">
+
+    </div>
+  </div>
+
+  <!-- SCENE 12 -->
+  <div class="scene hidden" id="scene12">
+    <img src="12.png" alt="Scene 12 Image" />
+    <div class="text">
+      <div class="text">
+      
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 13 -->
+  <div class="scene hidden" id="scene13">
+    <img src="13.png" alt="Scene 13 Image" />
+    <div class="text">
+      <
+    </div>
+  </div>
+
+  <!-- SCENE 14 -->
+  <div class="scene hidden" id="scene14">
+    <img src="14.png" alt="Scene 14 Image" />
+    <div class="text">
+      <li><button onclick="playSound('story3')">🔊 Click To Listen!</button></li>
+      
+    </div>
+  </div>
+
+  <!-- SCENE 15 -->
+  <div class="scene hidden" id="scene15">
+    <img src="15.png" alt="Scene 15 Image" />
+    <div class="text">
+      <li><button onclick="playSound('sun')">🔊 Sun</button></li>
+      <li><button onclick="playSound('fun')">🔊 Fun</button></li>
+    </div>
+  </div>
+
+  <!-- SCENE 16 -->
+  <div class="scene hidden" id="scene16">
+    <img src="16.png" alt="Scene 16 Image" />
+    <div class="text">
+      <
+    </div>
+  </div>
+
+  <!-- SCENE 17 -->
+  <div class="scene hidden" id="scene17">
+    <img src="17.png" alt="Scene 17 Image" />
+    <div class="text">
+    </div>
+  </div>
+
+ 
+
+
+
+
+<p></p>
+
+  <div class="arrow arrow-left" onclick="prevScene()">&#9664;</div>
+  <div class="arrow arrow-right" onclick="nextScene()">&#9654;</div>
+
+
+  <div class="navigation">
+    <button id="prevBtn" onclick="prevScene()">Back</button>
+    <button id="nextBtn" onclick="nextScene()">Next</button>
+  </div>
+  </div>
+
+  <script>
+       function speak(text) {
+
+const speech = new SpeechSynthesisUtterance(text);
+speech.pitch = 1;
+speech.rate = 1;
+speech.volume = 1;
+
+// Get available voices and select an American one if available
+const voices = window.speechSynthesis.getVoices();
+const americanVoice = voices.find(voice => voice.name.includes('US') || voice.name.includes('American'));
+if (americanVoice) {
+    speech.voice = americanVoice;
+}
+
+window.speechSynthesis.speak(speech);
+}
+
+
+    function playSound(soundId) {
+      var audio = document.getElementById(soundId);
+      if (audio) {
+        audio.play();
+      }
+    }
+   
+   
+    let currentScene = 1;
+ 
+    function showScene(sceneNumber) {
+      document.querySelectorAll(".scene").forEach((scene, index) => {
+        scene.classList.toggle("hidden", index !== sceneNumber - 1);
+      });
+    }
+
+    function nextScene() {
+      if (currentScene < 17) {
+        currentScene++;
+        showScene(currentScene);
+      }
+    }
+
+    function prevScene() {
+      if (currentScene > 1) {
+        currentScene--;
+        showScene(currentScene);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      showScene(currentScene);
+    });
+  </script>
+</body>
+
+</html>
